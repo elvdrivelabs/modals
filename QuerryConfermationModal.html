@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuerryConfermationModal</title>
+
+    <!-- tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!--font Poppins-->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+</head>
+<style>
+    body {
+        font-family: 'Poppins';
+
+    }
+
+    .submit {
+        background: #FF7426;
+
+    }
+
+    .form {
+        background: #FBEFCE;
+
+    }
+
+    input[type=text],
+    input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+
+    .cancelbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: #f44336;
+    }
+
+    .imgcontainer {
+        background-color: #DD9C13;
+        text-align: center;
+        margin: px 12px;
+        position: relative;
+    }
+
+    img.avatar {
+        width: 40%;
+        border-radius: 50%;
+    }
+
+    .container {
+        padding: 16px;
+    }
+
+    span.psw {
+        float: right;
+        padding-top: 16px;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+        padding-top: 60px;
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto 15% auto;
+        border: 1px solid #888;
+        width: 70%;
+
+    }
+
+
+    .close {
+        position: absolute;
+        right: 25px;
+        top: 0;
+        color: #000;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: red;
+        cursor: pointer;
+    }
+
+    /* Add Zoom Animation */
+    .animate {
+        -webkit-animation: animatezoom 0.6s;
+        animation: animatezoom 0.6s
+    }
+
+    @-webkit-keyframes animatezoom {
+        from {
+            -webkit-transform: scale(0)
+        }
+
+        to {
+            -webkit-transform: scale(1)
+        }
+    }
+
+    @keyframes animatezoom {
+        from {
+            transform: scale(0)
+        }
+
+        to {
+            transform: scale(1)
+        }
+    }
+
+
+    @media screen and (max-width: 300px) {
+        span.psw {
+            display: block;
+            float: none;
+        }
+
+        .cancelbtn {
+            width: 100%;
+        }
+    }
+
+    .checkPara {
+        text-align: justify;
+    }
+</style>
+
+
+    
+
+<body class="scroll">
+    <!-- here you can give your button on which you want to open the current modal  -->
+    
+    <button onclick="document.getElementById('id01').style.display='block'" class="text-md font-bold cursor-pointer ">
+        Login
+    </button>
+
+    <!-- here you can give your button on which you want to open the current modal  -->
+
+
+    <!-- modal starts here -->
+
+    <div id="id01" class="modal ">
+        <div class="modal-content animate rounded-xl ">
+            <div class="flex  justify-between  px-[1rem]">
+                <div class="flex items-center justify-center gap-2">
+
+                </div>
+                <div class="pt-8 mr-6 ">
+                    <button onclick="document.getElementById('id01').style.display='none'" class=""> <img
+                            src="images/Querry_closingSymbol.svg" alt="" class=""></button>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-[2rem] px-2 items-center justify-center my-[4rem]">
+                <img src="images/ConfirmationPageDone_symbol.svg" class="h-[3.25rem] w-[3.25rem]" alt="">
+
+                <p class="text-[24px] text-[##383838] ">Thank You for your query! we will get back to you within 48
+                    hours</p>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
